@@ -5,9 +5,10 @@
     "disk_size": 10140,
     "ssh_port": 22,
     "ssh_wait_timeout": "10000s",
-    "iso_url": "http://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-7.7.0-amd64-netinst.iso",
-    "iso_md5": "0b31bccccb048d20b551f70830bb7ad0",
-    "vm_name": "debian-770-wheezy"
+    "iso_url": "http://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-7.8.0-amd64-netinst.iso",
+    "iso_checksum": "e39c36d6adc0fd86c6edb0e03e22919086c883b37ca194d063b8e3e8f6ff6a3a",
+    "iso_checksum_type": "sha256",
+    "vm_name": "debian-78-wheezy"
   },
   "builders": [
     {
@@ -32,8 +33,8 @@
       "guest_os_type": "Debian_64",
       "headless": true,
       "http_directory": "http",
-      "iso_checksum": "{{user `iso_md5`}}",
-      "iso_checksum_type": "md5",
+      "iso_checksum": "{{user `iso_checksum`}}",
+      "iso_checksum_type": "{{user `iso_checksum_type`}}",
       "iso_url": "{{user `iso_url`}}",
       "shutdown_command": "echo 'halt -p' > shutdown.sh; echo 'vagrant'|sudo -S sh 'shutdown.sh'",
       "ssh_password": "vagrant",
