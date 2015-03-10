@@ -1,10 +1,12 @@
 Packer templates
 ================
 
-## Boxes description
+## Boxes
 
 * Debian wheezy
 * Debian wheezy with Puppet
+* Debian jessie
+* Debian jessie with Puppet
 
 ## Prerequisites
 
