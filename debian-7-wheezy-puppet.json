@@ -8,7 +8,7 @@
     "iso_url": "http://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-7.8.0-amd64-netinst.iso",
     "iso_checksum": "e39c36d6adc0fd86c6edb0e03e22919086c883b37ca194d063b8e3e8f6ff6a3a",
     "iso_checksum_type": "sha256",
-    "vm_name": "debian-78-wheezy"
+    "vm_name": "debian-78-wheezy-puppet"
   },
   "builders": [
     {
@@ -36,7 +36,6 @@
       "iso_checksum": "{{user `iso_checksum`}}",
       "iso_checksum_type": "{{user `iso_checksum_type`}}",
       "iso_url": "{{user `iso_url`}}",
-      "shutdown_command": "echo 'halt -p' > shutdown.sh; echo 'vagrant'|sudo -S sh 'shutdown.sh'",
       "ssh_password": "vagrant",
       "ssh_username": "vagrant",
       "ssh_port": "{{user `ssh_port`}}",
