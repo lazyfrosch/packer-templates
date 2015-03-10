@@ -13,7 +13,7 @@ chmod 0600 /home/vagrant/.ssh/authorized_keys
 chown -R vagrant:vagrant /home/vagrant/.ssh
 
 # Customize the message of the day
-echo 'Welcome to your Vagrant-built virtual machine.' > /var/run/motd
+echo 'Welcome to your Vagrant-built virtual machine.' > /etc/motd
 
 # Install NFS client
 apt-get -y install nfs-common
