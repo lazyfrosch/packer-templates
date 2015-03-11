@@ -2,7 +2,8 @@ set -e
 
 # Update the box
 apt-get -y update
-apt-get -y dist-upgrade
+modprobe isofs
+apt-get -y dist-upgrade | cat # pager output might block build
 apt-get -y install linux-headers-$(uname -r) build-essential
 apt-get -y install zlib1g-dev libssl-dev libreadline-gplv2-dev
 apt-get -y install curl unzip
