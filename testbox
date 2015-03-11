@@ -1,0 +1,29 @@
+#!/bin/bash
+
+set -e
+
+NAME="packer-templates-test"
+FILE="$1"
+
+if vagrant box list | grep -q "^$NAME"; then
+    echo "Removing existing box from local Vagrant..."
+    vagrant box remove "$NAME"
+fi
+
+echo "Adding the box to vagrant..."
+vagrant box add --name "$NAME" "$FILE"
+
+echo "Making sure our VM is down..."
+vagrant destroy
+
+echo "Bringing up the VM..."
+vagrant up
+
+echo "Giving you SSH access..."
+vagrant ssh || true
+
+echo "Destroying VM and removing it from vagrant..."
+vagrant destroy
+vagrant box remove "$NAME"
+
+echo "done."
