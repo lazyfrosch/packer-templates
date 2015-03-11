@@ -9,3 +9,10 @@ apt-get update
 # Install puppet/facter
 apt-get install -y puppet facter
 rm -f puppetlabs-release-"$CODENAME".deb
+
+# Disable Puppet agent on systemd
+# PuppetLabs has the service disabled per default
+if which systemctl >/dev/null; then
+  systemctl stop puppet
+  systemctl disable puppet
+fi
