@@ -1,9 +1,9 @@
 {
 "variables": {
-    "core": 1,
-    "memory": 512,
-    "disk_size": 10140,
-    "ssh_port": 22,
+    "core": "1",
+    "memory": "512",
+    "disk_size": "10140",
+    "ssh_port": "22",
     "ssh_wait_timeout": "10000s",
     "iso_url": "http://cdimage.debian.org/cdimage/release/8.1.0/amd64/iso-cd/debian-8.1.0-amd64-netinst.iso",
     "iso_checksum": "5d0a1f804d73aee73eee7efbb38456390558094fd19894a573f1514ca44347e0",
