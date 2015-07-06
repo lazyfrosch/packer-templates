@@ -21,7 +21,7 @@ if test -f .vbox_version ; then
   mount -o loop VBoxGuestAdditions.iso /mnt
   yes|sh /mnt/VBoxLinuxAdditions.run || true # ignoring error due to missing Xorg
   umount /mnt
-  rm -f VBoxGuestAdditions.iso
+  #rm -f VBoxGuestAdditions.iso
 
   # Start the newly build driver
   /etc/init.d/vboxadd start
