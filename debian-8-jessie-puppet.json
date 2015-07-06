@@ -5,8 +5,8 @@
     "disk_size": 10140,
     "ssh_port": 22,
     "ssh_wait_timeout": "10000s",
-    "iso_url": "http://cdimage.debian.org/cdimage/jessie_di_rc1/amd64/iso-cd/debian-jessie-DI-rc1-amd64-netinst.iso",
-    "iso_checksum": "00c9dc089953067177d82962c5759d4db91567151ca1bbe8551138fefe360340",
+    "iso_url": "http://cdimage.debian.org/cdimage/release/8.1.0/amd64/iso-cd/debian-8.1.0-amd64-netinst.iso",
+    "iso_checksum": "5d0a1f804d73aee73eee7efbb38456390558094fd19894a573f1514ca44347e0",
     "iso_checksum_type": "sha256",
     "vm_name": "debian-8-jessie-puppet"
   },
