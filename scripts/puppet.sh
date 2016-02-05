@@ -2,16 +2,14 @@ set -e
 
 # Prepare puppetlabs repo
 CODENAME=`lsb_release -cs`
-if [ "$CODENAME" = "jessie" ]; then
-    CODENAME=testing
-fi
-wget http://apt.puppetlabs.com/puppetlabs-release-"$CODENAME".deb
-dpkg -i puppetlabs-release-"$CODENAME".deb
+
+wget http://apt.puppetlabs.com/puppetlabs-release-pc1-"$CODENAME".deb
+dpkg -i puppetlabs-release-pc1-"$CODENAME".deb
 apt-get update
 
 # Install puppet/facter
-apt-get install -y puppet facter
-rm -f puppetlabs-release-"$CODENAME".deb
+apt-get install -y puppet-agent
+rm -f puppetlabs-release-pc1-"$CODENAME".deb
 
 # Disable Puppet agent on systemd
 # PuppetLabs has the service disabled per default
